@@ -32,15 +32,74 @@
     </nav>
 
     <main role="main" class="container">
+      <div class="row mt-5">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
 
-      <div class="container mt-5 mb-5 p-5">
-        <div class="col-md-12">
-          <h1>Mercado DS-7 <i class="fas fa-feather-alt"></i></h1>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam similique placeat vel perferendis architecto ducimus est voluptas obcaecati, 
-            temporibus amet itaque, harum laudantium, omnis voluptatibus veniam doloremque dolore distinctio quod autem repudiandae quam!.</p>
+        <div class="col-md-9">
+          <!-- Tarjeta de oferta más alta  -->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Mercado DS-7 <i class="fas fa-feather-alt"></i></h4>
+              <h6 class="card-subtitle mb-2 text-warning">Oferta más alta</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam similique placeat vel perferendis architecto ducimus est voluptas obcaecati, 
+                temporibus amet itaque, harum laudantium, omnis voluptatibus veniam doloremque dolore distinctio quod autem repudiandae quam!.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          <!-- Tarjeta de oferta más baja  -->
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Mercado DS-7 <i class="fas fa-feather-alt"></i></h4>
+              <h6 class="card-subtitle mb-2 text-success">Oferta más Baja</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam similique placeat vel perferendis architecto ducimus est voluptas obcaecati, 
+                temporibus amet itaque, harum laudantium, omnis voluptatibus veniam doloremque dolore distinctio quod autem repudiandae quam!.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+          
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <h6 class="text-muted"><b>Productos disponibles.</b></h6>
+            </div>
+          </div>
+          
+          <div class="row">
+          <!-- Tarjetas de selección de rubro/producto  -->
+          <?php
+            require_once("php/productos.php");
+          ?>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img class="card-img-top p-2" src="assets/img/logo.png" height="160" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text text-center">Producto #</p>
+                  <!-- <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+         
+
         </div>
       </div>
-      
     </main>
     <!-- Algo así: https://www.infojobs.net/ofertas-trabajo/distribucion-online  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
