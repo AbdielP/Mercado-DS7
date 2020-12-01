@@ -4,13 +4,13 @@
         $usr = $_REQUEST['usrn'];
         $psw = $_REQUEST['pswd'];
 
-        $salt = substr($usr, 0 ,2);
-        $pswcrpt = crypt($psw, $salt);
+        // $salt = substr($usr, 0 ,2);
+        // $pswcrpt = crypt($psw, $salt);
 
         require_once "classes/user.php";
 
         $obj_user = new usuario();
-        $usuario_valido = $obj_usuarios->validar_usuario($usr, $pswcrpt);
+        $usuario_valido = $obj_usuarios->validar_usuario($usr, $psw);
         foreach ($usuario_valido as $array_resp) {
             foreach ($array_resp as $value) {
                 $nfilas=$value;

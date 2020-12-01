@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +20,14 @@
         </a>
       </div>
       <div class="col-md-2">
-        <p align="center" class="m-0">Sesión no iniciada</p>
-        <p align="center" class="m-0">[ <a href='login.php' TARGET='_top'>Iniciar sesión</a> ]</p>
+      <?php
+        if (isset($_SESSION["usuario_valido"])) { 
+          print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
+        } else {
+          print "<p align='center' class='m-0'>Sesión no iniciada</p>";
+          print "<p align='center' class='m-0'>[ <a href='login.php' TARGET='_top'>Iniciar sesión</a> ]</p>";
+        }
+      ?>
       </div>
     </nav>
 
