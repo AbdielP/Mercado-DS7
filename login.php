@@ -1,16 +1,16 @@
 <?php
     session_start();
     if (isset($_REQUEST['usrn']) && isset($_REQUEST['pswd'])) {
-        $usr = $_REQUEST['usrn'];
-        $psw = $_REQUEST['pswd'];
+        $usrn = $_REQUEST['usrn'];
+        $pswd = $_REQUEST['pswd'];
 
         // $salt = substr($usr, 0 ,2);
         // $pswcrpt = crypt($psw, $salt);
 
-        require_once "classes/user.php";
+        require_once("classes/user.php");
 
         $obj_user = new usuario();
-        $usuario_valido = $obj_usuarios->validar_usuario($usr, $psw);
+        $usuario_valido = $obj_user->validar_usuario($usrn, $pswd);
         foreach ($usuario_valido as $array_resp) {
             foreach ($array_resp as $value) {
                 $nfilas=$value;
@@ -18,7 +18,7 @@
         }
 
         if ($nfilas > 0) {
-            $usuario_valido = $usr;
+            $usuario_valido = $usrn;
             $_SESSION["usuario_valido"] = $usuario_valido;
         }
     };
@@ -52,15 +52,16 @@
             print ("<p class='parrafocentrado'>Esta zona tiene el acceso restringido.<br> ". "Para entrar debe identificarse</p>\n");
             print ("<form class='entrada' name='login' ACTION='login.php' METHOD='POST'>\n");
                 print ("<p><label class='etiqueta-entrada'>Usuario:</label>\n");
-                print ("    <input type='text' name='usuario' size='15'></p>\n");
+                print ("    <input type='text' name='usrn' size='15'></p>\n");
                 print ("<p><label class='etiqueta-entrada'>Clave:</label>\n");
-                print ("    <input type='text' name='clave' size='15'></p>\n");
+                print ("    <input type='password' name='pswd' size='15'></p>\n");
                 print ("<p><input type='submit' value='entrar'></p>\n");
             print ("</form>\n");
 
             print ("<p class='parrafocentrado'>Nota: Si no dispone de identificación o tiene problemas". 
                     "para entrar<br>ponganse en contacto con el ".
-                    "<a href='MAILTO:webmaster@correofake.com'></a> administrador del sitio</p>");
+                    "<a href='MAILTO:webmaster@correofake.com'></a> administrador del sitio</p>\n");
+            print "<a href='index.php'>Volver a home</a>";
         }
     ?>
 </body>
