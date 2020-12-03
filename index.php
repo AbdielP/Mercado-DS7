@@ -32,7 +32,7 @@
     </nav>
 
     <main role="main" class="container">
-      <div class="row mt-5">
+      <div class="row mt-5 mb-5">
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
@@ -76,28 +76,27 @@
           </div>
           
           <div class="row">
-          <!-- Tarjetas de selección de rubro/producto  -->
-          <?php
-            require_once("php/productos.php");
-          ?>
-            <div class="col-md-4">
-              <div class="card mb-4">
-                <img class="card-img-top p-2" src="assets/img/logo.png" height="160" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text text-center">Producto #</p>
-                  <!-- <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div> -->
-                </div>
-              </div>
-            </div>
+            <!-- Tarjetas de selección de rubro/producto  -->
+            <?php
+              require_once("php/productos.php");
+            ?>
           </div>
-         
 
+          <!-- TARJETAS DE OFERTAS  -->
+          <?php
+            require_once("php/ofertas.php");
+          ?>
+          <!-- <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Mercado DS-7 <i class="fas fa-feather-alt"></i></h4>
+              <h6 class="card-subtitle mb-2 text-success">Oferta más Baja</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam similique placeat vel perferendis architecto ducimus est voluptas obcaecati, 
+                temporibus amet itaque, harum laudantium, omnis voluptatibus veniam doloremque dolore distinctio quod autem repudiandae quam!.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div> -->
+        
         </div>
       </div>
     </main>
