@@ -78,14 +78,16 @@
           <div class="row">
             <!-- Tarjetas de selección de rubro/producto  -->
             <?php
-              require_once("php/productos.php");
+              // require_once("php/productos.php");
+              require_once("php/ofertas.php");
             ?>
           </div>
 
           <!-- TARJETAS DE OFERTAS  -->
           <?php
-            require_once("php/ofertas.php");
+            // require_once("php/ofertas.php");
           ?>
+          
           <!-- <div class="card">
             <div class="card-body">
               <h4 class="card-title">Mercado DS-7 <i class="fas fa-feather-alt"></i></h4>
