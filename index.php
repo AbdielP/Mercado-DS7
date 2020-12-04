@@ -69,13 +69,13 @@
             </div>
           </div>
           
-          <div class="row mt-2">
+          <div class="row mt-3">
             <div class="col-md-12">
               <h6 class="text-muted"><b>Productos disponibles.</b></h6>
             </div>
           </div>
           
-          <div class="row">
+          <div class="row pl-3 pr-3">
             <!-- Tarjetas de selección de rubro/producto  -->
             <?php
               // require_once("php/productos.php");

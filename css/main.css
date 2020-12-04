@@ -4,3 +4,8 @@ html, body {
     color: #424242;
     font-size: .9rem;
 }
+
+.img-producto {
+    width: 25%;
+    margin: 10px;
+}
