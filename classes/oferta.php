@@ -6,8 +6,8 @@
           parent:: __construct();
       }
   
-      public function get_ofertas() {
-          $instruccion = "CALL sp_ofertas_select()";
+      public function get_ofertas_codigo($codigo) {
+          $instruccion = "CALL sp_ofertas_codigo_select('".$codigo."')";
           $consulta=$this->__db->query($instruccion);
           $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
       

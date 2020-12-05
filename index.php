@@ -78,30 +78,12 @@
           <div class="row pl-3 pr-3">
             <!-- Tarjetas de selección de rubro/producto  -->
             <?php
-              // require_once("php/productos.php");
-              require_once("php/ofertas.php");
+              require_once("php/productos.php");
             ?>
-          </div>
-
-          <!-- TARJETAS DE OFERTAS  -->
-          <?php
-            // require_once("php/ofertas.php");
-          ?>
-          
-          <!-- <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Mercado DS-7 <i class="fas fa-feather-alt"></i></h4>
-              <h6 class="card-subtitle mb-2 text-success">Oferta más Baja</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam similique placeat vel perferendis architecto ducimus est voluptas obcaecati, 
-                temporibus amet itaque, harum laudantium, omnis voluptatibus veniam doloremque dolore distinctio quod autem repudiandae quam!.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div> -->
-        
         </div>
       </div>
     </main>
+     <!-- ¿COMO SE HACE UN WEBSERVICE?  -->
     <!-- Algo así: https://www.infojobs.net/ofertas-trabajo/distribucion-online  -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
