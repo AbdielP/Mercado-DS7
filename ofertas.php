@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ofertas.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
@@ -33,11 +34,12 @@
       <div class="col-md-3">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title">Ofertas disponibles</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Producto: #Servicio basado en el codigo#</h6>
+            <p class="card-text">Listado de ofertas disponibles para el producto.</p>
+            <!-- <p class="card-text">Las ofertas contienen información del producto y del productor.</p> -->
+            <a href="index.php" class="card-link">Volver a listado de productos</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
           </div>
         </div>
       </div> 
@@ -48,7 +50,6 @@
           require_once("php/ofertas.php");
         ?>
       </div>
-
     </div>
   </main>
 </body>
