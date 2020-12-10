@@ -4,13 +4,6 @@
     $obj_ofertas = new oferta();
     $ofertas = $obj_ofertas->get_ofertas_codigo($codigo);
     foreach ($ofertas as $key => $oferta) {
-        // print "<div class='card'>";
-        // print     "<div class='card-body'>";
-        // print         "<h5 class='card-title text-capitalize'>".$oferta['prod']."</h5>";
-        // print         "<p class='card-text'>".$oferta['info']."</p>";
-        // print         "<p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>";
-        // print     "</div>";
-        // print "</div>";
 
         print "<div class='card flex-md-row mb-4 box-shadow h-md-250 border-success'>";
         print     "<div class='card-body d-flex flex-column align-items-start'>";

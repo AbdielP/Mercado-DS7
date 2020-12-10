@@ -68,27 +68,7 @@
         </div>
       </div>
     </div>
-    
 
-
-    <!-- VIEJOS...  -->
-    <!-- <div class="row mt-5 mb-5">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ofertas disponibles</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Producto: #Servicio basado en el codigo#</h6>
-            <p class="card-text">Listado de ofertas disponibles para el producto.</p>
-            <a href="index.php" class="card-link">Volver a listado de productos</a>
-          </div>
-        </div>
-      </div> 
-
-      <div class="card-group">
-        
-      </div>
-    </div> -->
-    
   </main>
 </body>
 </html>
