@@ -36,11 +36,52 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <h2><i class="fas fa-toolbox"></i> Módulo de administración y cración de ofertas.</h2>
+                <h2><i class="fas fa-tags"></i> Administración y creación de ofertas.</h2>
             </div>
+            <p>Formulario para creación de nuevas ofertas. Seleccione la categoría del producto a ofertar, coloque un precio, descripción de la oferta y unidad de peso (<b>Kg</b> o <b>Lb</b>) para vender.</p>
             <hr>
+            <h4>Creación de ofertas. <i class="fas fa-shopping-basket"></i></h4>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="precio">Precio de la oferta (Dólares).</label> <br>
+                        <input id="precio" name="precio" class="form-control form-control-sm" type="number" step="any" min="0.01" placeholder="Ejemplo: 0.80">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="categoria">Categoría de la oferta.</label> <br>
+                        <select id="categoria" name="categoria" class="form-control form-control-sm">
+                            <option selected>Listado de productos aquí...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="unidadpeso">Unidad de medida (peso).</label> <br>
+                        <select id="unidadpeso" name="unidadpeso" class="form-control form-control-sm">
+                            <option value="lb" selected>Libras (Lb)</option>
+                            <option value="kg">Kilogramos (Kg)</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descripción de la oferta.</label> <br>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="multiple" rows="2" placeholder="Ingrese aquí una leyenda o descripción de la oferta. máximo 255 caracteres." required></textarea>
+                </div>
+                <div class="col-md-12">
+                    <small>La descripción es opcional. Puede utilizarla para brindar información útil al comprador sobre su producto.</small>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary btn-block">Crear oferta <i class="far fa-paper-plane"></i></button>
+            </form>
+            
         </div>
     </div>
+    <footer class="my-5  text-muted text-center text-small">
+        <p class="mb-1">&copy; 2020 - Proyecto final Desarrollo de software 7</p>
+            <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.php">Home</a></li>
+        </ul>
+    </footer>
   </div>
 
 </body>
