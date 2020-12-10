@@ -18,7 +18,7 @@
         print       "<h3 class='mb-0'>";
         print         "<h4 class='text-dark'>".$oferta['prod']."</h4>";
         print       "</h3>";
-        print       "<div class='mb-1 text-muted'>Nov 12</div>";
+        print       "<div class='mb-1 text-muted'>#CREATED AT AQUÍ#</div>";
         print      " <p class='card-text mb-auto pb-2'>".$oferta['info']."</p>";
         print       "<h6 class='card-subtitle mb-2 text-info'>".$oferta['precio']."$ (USD) Precio por libra.</h6>";
         print     "</div>";
@@ -26,14 +26,12 @@
 
         print     "<div class='card-body d-flex flex-column align-items-start card-productor'>";
         print       "<strong class='d-inline-block mb-2 text-muted'>Información del productor</strong>";
-        print       "<h3 class='mb-0'>";
-        print         "<h4 class='text-dark'>".$oferta['prod']."</h4>";
-        print       "</h3>";
-        print       "<div class='mb-1 text-muted'>Nov 12</div>";
-        print      " <p class='card-text mb-auto pb-2'>".$oferta['info']."</p>";
-        print       "<h6 class='card-subtitle mb-2 text-info'>".$oferta['precio']."$ (USD) Precio por libra.</h6>";
+        print       "<div class='mb-1 text-muted'>Nombre: </div>";
+        print       "<p class='card-text mb-auto pb-2 text-capitalize'>".$oferta['nombre']. $oferta['apellido']."</p>";
+        print       "<a href=".$oferta['idprtor']." class='card-link'>Ver información de productor</a>";
+        // print       "<h6 class='card-subtitle mb-2 text-info'>".$oferta['precio']."$ (USD) Precio por libra.</h6>";
         print     "</div>";
-        print     "</div>";
+        print   "</div>";
         print "</div>";
     }
 ?>
