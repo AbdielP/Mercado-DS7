@@ -37,20 +37,55 @@
             <h5 class="card-title">Ofertas disponibles</h5>
             <h6 class="card-subtitle mb-2 text-muted">Producto: #Servicio basado en el codigo#</h6>
             <p class="card-text">Listado de ofertas disponibles para el producto.</p>
-            <!-- <p class="card-text">Las ofertas contienen información del producto y del productor.</p> -->
+            <p class="card-text text-info">Las ofertas contienen información del producto y del productor.</p>
+            <hr>
+            <div class='mb-1 text-muted'>Opciones: </div>
+            <?php
+              if (isset($_SESSION["usuario_valido"])) { 
+                print "<a href='nuevaoferta.php' class='btn btn-success btn-sm btn-block mt-2'>Crear nueva oferta</a>";
+              } else {
+                print "<p align='center' class='m-0'>[ <a href='login.php' TARGET='_top'>Inicie sesión para crear una oferta</a> ]</p>";
+        
+              }
+            ?>
+           
+            <hr>
             <a href="index.php" class="card-link">Volver a listado de productos</a>
             <!-- <a href="#" class="card-link">Another link</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="card-group">
+        <!-- TARJETAS OFERTAS  -->
+          <?php
+            require_once("php/ofertas.php");
+          ?>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- VIEJOS...  -->
+    <!-- <div class="row mt-5 mb-5">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ofertas disponibles</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Producto: #Servicio basado en el codigo#</h6>
+            <p class="card-text">Listado de ofertas disponibles para el producto.</p>
+            <a href="index.php" class="card-link">Volver a listado de productos</a>
           </div>
         </div>
       </div> 
 
       <div class="card-group">
-       <!-- TARJETAS OFERTAS  -->
-        <?php
-          require_once("php/ofertas.php");
-        ?>
+        
       </div>
-    </div>
+    </div> -->
+    
   </main>
 </body>
 </html>
