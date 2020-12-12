@@ -32,6 +32,13 @@
     </div>
   </nav>
 
+  <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "<div class='alert alert-success text-center' role='alert'>";
+            include_once("php/nuevaoferta.php");
+        echo "</div>"; 
+    }
+  ?>
   <div class="container mt-5 mb-5 p-5">
     <div class="row">
         <div class="col-md-12">
@@ -77,8 +84,8 @@
                     
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Descripción de la oferta.</label> <br>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="multiple" rows="2" placeholder="Ingrese aquí una leyenda o descripción de la oferta. máximo 255 caracteres." required></textarea>
+                    <label for="desc">Descripción de la oferta.</label> <br>
+                    <textarea class="form-control" id="desc" name="desc" rows="2" placeholder="Ingrese aquí una leyenda o descripción de la oferta. máximo 255 caracteres." required></textarea>
                 </div>
                 <div class="col-md-12">
                     <small class="text-info">La descripción es opcional. Puede utilizarla para brindar información útil al comprador sobre su producto.</small>
@@ -92,7 +99,6 @@
                         $obj_user = new usuario();
                         $user = $obj_user->datos_usuario($_SESSION["usuario_valido"]);    
                         foreach ($user as $key => $datos) {
-                            // print $datos['nmb'];
                             print "<div class='col-md-6 d-flex justify-content-center align-items-center'>";
                             print   "<label for='nombre' class='text-secondary m-0 mr-2'>Nombre:</label>";
                             print   "<input id='nombre' name='nombre' class='m-0 text-secondary remove-style font-weight-bold' type='text' value='".$datos['nmb'] ." ".$datos['apll']."' disabled>";
@@ -101,7 +107,7 @@
                             print   "<label for='correo' class='text-secondary m-0 mr-2'>Correo eléctronico:</label>";
                             print   "<input id='correo' name='correo' class='m-0 text-secondary remove-style font-weight-bold' type='text' value='".$datos['corel']."' disabled>";
                             print "</div>";
-                            print "<input id='id' name='id' type='hidden' value='".$datos['id']."'>";
+                            print "<input id='idproductor' name='idproductor' type='hidden' value='".$datos['id']."'>";
 
                         }   
                     ?>   
@@ -121,6 +127,5 @@
         </ul>
     </footer>
   </div>
-
 </body>
 </html>
