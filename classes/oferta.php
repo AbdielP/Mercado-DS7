@@ -30,6 +30,18 @@
         }
       }   
 
+      public function get_oferta($id) {
+        $instruccion = "CALL sp_select_oferta('".$id."')";
+        $consulta=$this->__db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+    
+        if ($resultado) {
+            return $resultado;
+            $resultado->close();
+            $this->__db->close();
+        }
+      }
+
       public function insert_oferta($idprod, $idprdtr, $precio, $qty, $unt, $descrp) {
         $message = "Oferta generada exitosamente en el sistema.";
         try {
