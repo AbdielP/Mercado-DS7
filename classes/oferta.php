@@ -43,7 +43,7 @@
       }
 
       public function insert_oferta($idprod, $idprdtr, $precio, $qty, $unt, $descrp) {
-        $message = "Oferta generada exitosamente en el sistema.";
+        $message = "Oferta generada éxitosamente en el sistema.";
         try {
             $instruccion = "CALL sp_insert_oferta('".$idprod."','".$idprdtr."','".$precio."','".$qty."','".$unt."','".$descrp."')";
             $query = $this->__db->query($instruccion);
@@ -56,5 +56,17 @@
             return $message = "Error insertando oferta en la base de datos. $th";
         }
       }
+    
+    public function update_oferta($idofert, $idprod, $precio, $qty, $unt, $desc) {
+      try {
+        $instruccion = "CALL sp_update_oferta('".$idofert."','".$idprod."','".$precio."','".$qty."','".$unt."','".$desc."')";
+        $query = $this->__db->query($instruccion);
+        $query->close();
+        $this->__db->close();
+        return true;
+      } catch (\Throwable $th) {
+          return false;
+      }
+    }
   }  
 ?>
