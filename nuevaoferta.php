@@ -23,7 +23,6 @@
         <div class="col-md-2">
         <?php
         if (isset($_SESSION["usuario_valido"])) { 
-            // print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
             print "<ul class='navbar-nav'>";
             print     "<li class='nav-item dropdown'>";
             print         "<a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>";
@@ -42,21 +41,7 @@
         }
         ?>
         </div>
-        <!-- <div class="col-md-2"> -->
-            <!-- <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Bienvenido apinzon@correo.com
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="index.php">Home</a>
-                    <a class="dropdown-item" href="#">Mis ofertas</a>
-                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
-                    </div>
-                </li>   
-            </ul> -->
-        <!-- </div> -->
-  </nav>
+    </nav>
 
   <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
