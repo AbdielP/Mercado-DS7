@@ -22,10 +22,22 @@
       <div class="col-md-2">
       <?php
         if (isset($_SESSION["usuario_valido"])) { 
-          print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
+          // print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
+          print "<ul class='navbar-nav'>";
+          print     "<li class='nav-item dropdown'>";
+          print         "<a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>";
+          print         "Bienvenido ".$_SESSION["usuario_valido"]."";
+          print         "</a>";
+          print         "<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>";
+          print         "<a class='dropdown-item' href='index.php'>Home</a>";
+          print         "<a class='dropdown-item' href='#'>Mis ofertas</a>";
+          print         "<a class='dropdown-item' href='#'>Cerrar Sesión</a>";
+          print         "</div>";
+          print     "</li>";   
+          print "</ul>";
         } else {
-          print "<p align='center' class='m-0'>Sesión no iniciada</p>";
-          print "<p align='center' class='m-0'>[ <a href='login.php' TARGET='_top'>Iniciar sesión</a> ]</p>";
+            print "<p align='center' class='m-0'>Sesión no iniciada</p>";
+            print "<p align='center' class='m-0'>[ <a href='login.php' TARGET='_top'>Iniciar sesión</a> ]</p>";
         }
       ?>
       </div>

@@ -23,13 +23,39 @@
         <div class="col-md-2">
         <?php
         if (isset($_SESSION["usuario_valido"])) { 
-            print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
+            // print "<p align='center' class='m-0'>Bienvenido ".$_SESSION["usuario_valido"]."</p>";
+            print "<ul class='navbar-nav'>";
+            print     "<li class='nav-item dropdown'>";
+            print         "<a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>";
+            print         "Bienvenido ".$_SESSION["usuario_valido"]."";
+            print         "</a>";
+            print         "<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>";
+            print         "<a class='dropdown-item' href='index.php'>Home</a>";
+            print         "<a class='dropdown-item' href='#'>Mis ofertas</a>";
+            print         "<a class='dropdown-item' href='#'>Cerrar Sesión</a>";
+            print         "</div>";
+            print     "</li>";   
+            print "</ul>";
         } else {
             print "<p align='center' class='m-0'>Sesión no iniciada</p>";
             print "<p align='center' class='m-0'>[ <a href='login.php' TARGET='_top'>Iniciar sesión</a> ]</p>";
         }
         ?>
-    </div>
+        </div>
+        <!-- <div class="col-md-2"> -->
+            <!-- <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bienvenido apinzon@correo.com
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="index.php">Home</a>
+                    <a class="dropdown-item" href="#">Mis ofertas</a>
+                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                    </div>
+                </li>   
+            </ul> -->
+        <!-- </div> -->
   </nav>
 
   <?php
@@ -127,5 +153,8 @@
         </ul>
     </footer>
   </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
