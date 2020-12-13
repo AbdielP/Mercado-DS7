@@ -13,6 +13,7 @@
     if (isset($_SESSION["usuario_valido"])) {
         session_destroy();
         print ("<br><br><p align='center'>Sesión finalizada.</p>");
+        print ("<p align='center'> [ <a href='index.php'>Volver a Home</a> ] </p>\n");
         print ("<p align='center'> [ <a href='login.php'>Iniciar sesión</a> ] </p>\n");
     } else {
         print ("<br><br>\n");
