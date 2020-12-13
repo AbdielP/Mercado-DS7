@@ -43,8 +43,8 @@
       </div>
     </nav>
 
-    <main role="main" class="container">
-      <div class="row mt-5 mb-5">
+    <main role="main" class="container pb-4">
+      <div class="row mt-5">
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
