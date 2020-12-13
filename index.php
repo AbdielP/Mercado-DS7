@@ -30,7 +30,7 @@
           print         "</a>";
           print         "<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>";
           print         "<a class='dropdown-item' href='index.php'>Home</a>";
-          print         "<a class='dropdown-item' href='#'>Mis ofertas</a>";
+          print         "<a class='dropdown-item' href='ofertas/misofertas.php'>Mis ofertas</a>";
           print         "<a class='dropdown-item' href='logout.php'>Cerrar Sesión</a>";
           print         "</div>";
           print     "</li>";   
