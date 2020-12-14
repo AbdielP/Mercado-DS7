@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container pt-5">
-        <div class="row">
+        <div class="row d-flex flex-column">
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $idofert = $_POST['idofert'];
@@ -28,7 +28,7 @@
                 if ($oferta_actualizada = true) {
                     print "<h1 class='text-info'>¡Oferta Actualizada! <i class='far fa-thumbs-up'></i></h1>";
                 } else {
-                    print "<h1 class='text-danger'>Oops.. <i class='fas fa-times-circle'></i></h1><br>";
+                    print "<h1 class='text-danger'>Oops.. <i class='fas fa-times-circle'></i></h1>";
                     print "<p class='text-info'>Algo ha salido mal, contacte con el administrador del sitio para reportar un problema.</p>";
                 }
             }

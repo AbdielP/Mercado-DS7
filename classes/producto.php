@@ -7,7 +7,7 @@
       }
   
       public function get_productos() {
-          $instruccion = "CALL sp_productos_select()";
+          $instruccion = "CALL sp_select_productos()";
           $consulta=$this->__db->query($instruccion);
           $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
       

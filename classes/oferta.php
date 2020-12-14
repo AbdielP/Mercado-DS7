@@ -7,7 +7,7 @@
       }
   
       public function get_ofertas_codigo($codigo) {
-          $instruccion = "CALL sp_ofertas_codigo_select('".$codigo."')";
+          $instruccion = "CALL sp_select_ofertas_codigo('".$codigo."')";
           $consulta=$this->__db->query($instruccion);
           $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
       
@@ -60,6 +60,18 @@
     public function update_oferta($idofert, $idprod, $precio, $qty, $unt, $desc) {
       try {
         $instruccion = "CALL sp_update_oferta('".$idofert."','".$idprod."','".$precio."','".$qty."','".$unt."','".$desc."')";
+        $query = $this->__db->query($instruccion);
+        $query->close();
+        $this->__db->close();
+        return true;
+      } catch (\Throwable $th) {
+          return false;
+      }
+    }
+
+    public function remover_oferta($idofert) {
+      try {
+        $instruccion = "CALL sp_update_remover_oferta('".$idofert."')";
         $query = $this->__db->query($instruccion);
         $query->close();
         $this->__db->close();
