@@ -73,15 +73,15 @@
               <div class="row">
                 <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
                 <?php
-                  require_once("ofertas/ofertareciente.php");
-                  foreach ($oferta_max as $key => $max) {
+                  require_once("ofertas/estadisticasofertas.php");
+                  foreach (oferta_max_reciente() as $key => $max) {
                     print "<h6 class='card-subtitle mb-2 ml-3 text-info'>".$max['prod']."</h6>";
                   }
                 ?>
               </div>
               <?php
-                  require_once("ofertas/ofertareciente.php");
-                  foreach ($oferta_max as $key => $max) {
+                  require_once("ofertas/estadisticasofertas.php");
+                  foreach (oferta_max_reciente() as $key => $max) {
                     print "<p class='card-text'>".$max['descripcion']."</p>";
                     print "<button type='button' class='btn btn-sm btn-light'>";
                     print  "Cantidad <span class='badge badge-info'>".$max['qty']."</span>";
@@ -99,8 +99,8 @@
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                   <span class="text-muted">Precio</span>
                   <?php
-                    require_once("ofertas/ofertareciente.php");
-                    foreach ($oferta_max as $key => $max) {
+                   require_once("ofertas/estadisticasofertas.php");
+                   foreach (oferta_max_reciente() as $key => $max) {
                       print "<span class='badge badge-primary badge-pill'>".$max['precio']." USD</span>";
                     }
                   ?>
@@ -108,8 +108,8 @@
                 <ul class="list-group mb-3">
                   <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <?php
-                    require_once("ofertas/ofertareciente.php");
-                    foreach ($oferta_max as $key => $max) {
+                    require_once("ofertas/estadisticasofertas.php");
+                    foreach (oferta_max_reciente() as $key => $max) {
                       print "<div>";
                       print   "<h6 class='my-0 text-info text-capitalize'>".$max['nmb']." ".$max['apll']."</h6>";
                       print   "<small class='text-muted'>".$max['corel']."</small>";
@@ -120,8 +120,8 @@
                   </li>
                 </ul>
                 <?php
-                  require_once("ofertas/ofertareciente.php");
-                  foreach ($oferta_max as $key => $max) {
+                 require_once("ofertas/estadisticasofertas.php");
+                 foreach (oferta_max_reciente() as $key => $max) {
                     print "<p class='card-text'>".$max['info']."</p>";
                   }
                 ?>
@@ -129,7 +129,7 @@
 
             </div> <!-- FINAL DIV CARD-BODY -->
           </div>
-
+                      
           <!-- Tarjeta de oferta más alta y más baja  -->
           <div class="card flex-md-row">
             <div class="card-body">
@@ -141,7 +141,12 @@
                   <div class="col-md-5">
                     <h5 class="d-flex justify-content-between align-items-center mb-3">
                       <span class="text-muted">Precio</span>
-                      <span class='badge badge-warning badge-pill'>$0.33</span>
+                      <?php
+                        require_once("ofertas/estadisticasofertas.php");
+                        foreach (oferta_max_precio() as $key => $max_precio) {
+                          print "<span class='badge badge-warning badge-pill'>$".$max_precio['precio']."</span>";
+                        }
+                      ?>
                     </h5>
                   </div>
               </div>
@@ -149,17 +154,25 @@
               <hr class="pt-0 mt-0">
               <div class="row">
                 <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
-                <h6 class="card-subtitle mb-2 ml-3 text-warning">#nombre prod#</h6>
+                <?php
+                  require_once("ofertas/estadisticasofertas.php");
+                  foreach (oferta_max_precio() as $key => $max_precio) {
+                    print "<h6 class='card-subtitle mb-2 ml-3 text-warning'>".$max_precio['prod']."</h6>";
+                  }
+                ?>
               </div>
-              <p class="card-text">
-                Info de este producto. Descripción de esta oferta traida de la BD.
-              </p>
-              <button type="button" class="btn btn-sm btn-light">
-                Cantidad <span class="badge badge-warning">100</span>
-              </button>
-              <button type="button" class="btn btn-sm btn-light">
-                <span class="badge badge-warning">Lb</span>
-              </button>
+              <?php
+                require_once("ofertas/estadisticasofertas.php");
+                foreach (oferta_max_precio() as $key => $max_precio) {
+                  print "<p class='card-text'>".$max_precio['descripcion']."</p>";
+                  print "<button type='button' class='btn btn-sm btn-light'>";
+                  print "  Cantidad <span class='badge badge-warning'>".$max_precio['qty']."</span>";
+                  print "</button>";
+                  print "<button type='button' class='btn btn-sm btn-light'>";
+                  print "  <span class='badge badge-warning text-capitalize'>".$max_precio['unt']."</span>";
+                  print "</button>";
+                }
+              ?>
             </div>
 
             <div class="card-body">
@@ -171,7 +184,12 @@
                   <div class="col-md-5">
                     <h5 class="d-flex justify-content-between align-items-center mb-3">
                       <span class="text-muted">Precio</span>
-                      <span class='badge badge-success badge-pill'>$0.33</span>
+                      <?php
+                        require_once("ofertas/estadisticasofertas.php");
+                        foreach (oferta_min_precio() as $key => $min_precio) {
+                          print "<span class='badge badge-success badge-pill'>$".$min_precio['precio']."</span>";
+                        }
+                      ?>
                     </h5>
                   </div>
               </div>
@@ -179,17 +197,25 @@
               <hr class="pt-0 mt-0">
               <div class="row">
                 <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
-                <h6 class="card-subtitle mb-2 ml-3 text-success">#producto#</h6>
+                <?php
+                  require_once("ofertas/estadisticasofertas.php");
+                  foreach (oferta_min_precio() as $key => $min_precio) {
+                    print "<h6 class='card-subtitle mb-2 ml-3 text-success'>".$min_precio['prod']."</h6>";
+                  }
+                ?>
               </div>
-              <p class="card-text">
-                Info de este producto. Descripción de esta oferta traida de la BD.
-              </p>
-              <button type="button" class="btn btn-sm btn-light">
-                Cantidad <span class="badge badge-success">100</span>
-              </button>
-              <button type="button" class="btn btn-sm btn-light">
-                <span class="badge badge-success">Lb</span>
-              </button>
+              <?php
+                require_once("ofertas/estadisticasofertas.php");
+                foreach (oferta_min_precio() as $key => $min_precio) {
+                  print "<p class='card-text'>".$max_precio['descripcion']."</p>";
+                  print "<button type='button' class='btn btn-sm btn-light'>";
+                  print "  Cantidad <span class='badge badge-success'>".$max_precio['qty']."</span>";
+                  print "</button>";
+                  print "<button type='button' class='btn btn-sm btn-light'>";
+                  print "  <span class='badge badge-success text-capitalize'>".$max_precio['unt']."</span>";
+                  print "</button>";
+                }
+              ?>
             </div>
           </div>
           

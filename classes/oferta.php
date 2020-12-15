@@ -3,19 +3,19 @@
 
   class oferta extends modeloCredencialesDB {
       public function __construct() {
-          parent:: __construct();
+        parent:: __construct();
       }
   
       public function get_ofertas_codigo($codigo) {
-          $instruccion = "CALL sp_select_ofertas_codigo('".$codigo."')";
-          $consulta=$this->__db->query($instruccion);
-          $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+        $instruccion = "CALL sp_select_ofertas_codigo('".$codigo."')";
+        $consulta=$this->__db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
       
-          if ($resultado) {
-              return $resultado;
-              $resultado->close();
-              $this->__db->close();
-          }
+        if ($resultado) {
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
+        }
       }
       
       public function get_ofertas_usuario($correo) {
@@ -24,9 +24,9 @@
         $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
     
         if ($resultado) {
-            return $resultado;
-            $resultado->close();
-            $this->__db->close();
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
         }
       }   
 
@@ -36,21 +36,47 @@
         $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
     
         if ($resultado) {
-            return $resultado;
-            $resultado->close();
-            $this->__db->close();
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
         }
       }
-
+      // ESTADISTICAS DE OFERTAS ------------------------------------------
+      // OFERTA MÁS RECIENTE 
       public function get_oferta_max() {
         $instruccion = "CALL sp_select_max_oferta()";
         $consulta=$this->__db->query($instruccion);
         $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
     
         if ($resultado) {
-            return $resultado;
-            $resultado->close();
-            $this->__db->close();
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
+        }
+      }
+      // OFERTA MÁS ALTA(PRECIO) 
+      public function get_oferta_precio_max() {
+        $instruccion = "CALL sp_select_max_precio_oferta()";
+        $consulta=$this->__db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+    
+        if ($resultado) {
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
+        }
+      }
+
+      // OFERTA MÁS BAJA(PRECIO) 
+      public function get_oferta_precio_min() {
+        $instruccion = "CALL sp_select_min_precio_oferta()";
+        $consulta=$this->__db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+    
+        if ($resultado) {
+          return $resultado;
+          $resultado->close();
+          $this->__db->close();
         }
       }
 
