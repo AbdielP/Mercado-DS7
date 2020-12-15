@@ -42,6 +42,18 @@
         }
       }
 
+      public function get_oferta_max() {
+        $instruccion = "CALL sp_select_max_oferta()";
+        $consulta=$this->__db->query($instruccion);
+        $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+    
+        if ($resultado) {
+            return $resultado;
+            $resultado->close();
+            $this->__db->close();
+        }
+      }
+
       public function insert_oferta($idprod, $idprdtr, $precio, $qty, $unt, $descrp) {
         $message = "Oferta generada éxitosamente en el sistema.";
         try {

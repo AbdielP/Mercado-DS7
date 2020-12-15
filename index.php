@@ -66,42 +66,65 @@
 
         <div class="col-md-9">
           <!-- Tarjeta de oferta más reciente  -->
-          <div class="card flex-md-row border-success">
-            <div class="card-body">
-              <h4 class="card-title text-secondary"><i class="far fa-handshake"></i> Ofertas Online</h4>
+          <div class="card flex-md-row">
+            <div class="card-body col-md-7 pb-0 mb-0">
+              <h4 class="card-title text-secondary"><i class="far fa-clock"></i> Oferta más reciente</h4>
               <hr>
               <div class="row">
-                <h6 class="card-subtitle mb-2 ml-3 text-info">Oferta más reciente</h6>
-                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto</h6>
+                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
+                <?php
+                  require_once("ofertas/ofertareciente.php");
+                  foreach ($oferta_max as $key => $max) {
+                    print "<h6 class='card-subtitle mb-2 ml-3 text-info'>".$max['prod']."</h6>";
+                  }
+                ?>
               </div>
-              <p class="card-text">
-                Info de este producto. Descripción de esta oferta traida de la BD.
-              </p>
-              <button type="button" class="btn btn-sm btn-info">
-                Cantidad <span class="badge badge-light">100</span>
-              </button>
-              <button type="button" class="btn btn-sm btn-danger">
-                <span class="badge badge-light">Lb</span>
-              </button>
+              <?php
+                  require_once("ofertas/ofertareciente.php");
+                  foreach ($oferta_max as $key => $max) {
+                    print "<p class='card-text'>".$max['descripcion']."</p>";
+                    print "<button type='button' class='btn btn-sm btn-light'>";
+                    print  "Cantidad <span class='badge badge-info'>".$max['qty']."</span>";
+                    print "</button>";
+                    print "<button type='button' class='btn btn-sm btn-light'>";
+                    print  "<span class='badge badge-info text-capitalize'>".$max['unt']."</span>";
+                    print "</button>";
+                  }
+                ?>
             </div>
 
-            <div class="card-body"> <!-- INICIO DIV CARD-BODY -->
+            <div class="card-body col-md-5 pb-0 mb-0"> <!-- INICIO DIV CARD-BODY -->
 
               <div class="order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                   <span class="text-muted">Precio</span>
-                  <span class="badge badge-success badge-pill">3 USD</span>
+                  <?php
+                    require_once("ofertas/ofertareciente.php");
+                    foreach ($oferta_max as $key => $max) {
+                      print "<span class='badge badge-success badge-pill'>".$max['precio']." USD</span>";
+                    }
+                  ?>
                 </h4>
                 <ul class="list-group mb-3">
                   <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                      <h6 class="my-0 text-info">Abdiel Pinzón</h6>
-                      <small class="text-muted">apinzon@correo.com</small>
-                    </div>
-                    <span class="text-success h6">$3</span>
+                  <?php
+                    require_once("ofertas/ofertareciente.php");
+                    foreach ($oferta_max as $key => $max) {
+                      print "<div>";
+                      print   "<h6 class='my-0 text-info text-capitalize'>".$max['nmb']." ".$max['apll']."</h6>";
+                      print   "<small class='text-muted'>".$max['corel']."</small>";
+                      print "</div>";
+                      print "<span class='text-success h6'>$".$max['precio']."</span>";
+                    }
+                  ?>
                   </li>
-                  
                 </ul>
+                <?php
+                  require_once("ofertas/ofertareciente.php");
+                  foreach ($oferta_max as $key => $max) {
+                    print "<p class='card-text'>".$max['info']."</p>";
+                  }
+                ?>
               </div>
 
             </div> <!-- FINAL DIV CARD-BODY -->
