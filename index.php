@@ -101,7 +101,7 @@
                   <?php
                     require_once("ofertas/ofertareciente.php");
                     foreach ($oferta_max as $key => $max) {
-                      print "<span class='badge badge-success badge-pill'>".$max['precio']." USD</span>";
+                      print "<span class='badge badge-primary badge-pill'>".$max['precio']." USD</span>";
                     }
                   ?>
                 </h4>
@@ -114,7 +114,7 @@
                       print   "<h6 class='my-0 text-info text-capitalize'>".$max['nmb']." ".$max['apll']."</h6>";
                       print   "<small class='text-muted'>".$max['corel']."</small>";
                       print "</div>";
-                      print "<span class='text-success h6'>$".$max['precio']."</span>";
+                      print "<span class='text-primary h6'>$".$max['precio']."</span>";
                     }
                   ?>
                   </li>
@@ -133,38 +133,62 @@
           <!-- Tarjeta de oferta más alta y más baja  -->
           <div class="card flex-md-row">
             <div class="card-body">
-              <h4 class="card-title text-secondary"><i class="far fa-handshake"></i> Ofertas Online</h4>
-              <hr>
+
               <div class="row">
-                <h6 class="card-subtitle mb-2 ml-3 text-warning">Oferta más Alta</h6>
-                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto</h6>
+                  <div class="col-md-7">
+                    <h5 class="card-title text-secondary"><i class="fas fa-arrow-up"></i> Oferta más alta</h5>
+                  </div>
+                  <div class="col-md-5">
+                    <h5 class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="text-muted">Precio</span>
+                      <span class='badge badge-warning badge-pill'>$0.33</span>
+                    </h5>
+                  </div>
+              </div>
+
+              <hr class="pt-0 mt-0">
+              <div class="row">
+                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
+                <h6 class="card-subtitle mb-2 ml-3 text-warning">#nombre prod#</h6>
               </div>
               <p class="card-text">
                 Info de este producto. Descripción de esta oferta traida de la BD.
               </p>
-              <button type="button" class="btn btn-sm btn-secondary">
-                Cantidad <span class="badge badge-light">100</span>
+              <button type="button" class="btn btn-sm btn-light">
+                Cantidad <span class="badge badge-warning">100</span>
               </button>
-              <button type="button" class="btn btn-sm btn-secondary">
-                <span class="badge badge-light">Lb</span>
+              <button type="button" class="btn btn-sm btn-light">
+                <span class="badge badge-warning">Lb</span>
               </button>
             </div>
 
             <div class="card-body">
-              <h4 class="card-title text-secondary"><i class="far fa-handshake"></i> Ofertas Online</h4>
-              <hr>
+
+            <div class="row">
+                  <div class="col-md-7">
+                    <h5 class="card-title text-secondary"><i class="fas fa-arrow-down"></i> Oferta más baja</h5>
+                  </div>
+                  <div class="col-md-5">
+                    <h5 class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="text-muted">Precio</span>
+                      <span class='badge badge-success badge-pill'>$0.33</span>
+                    </h5>
+                  </div>
+              </div>
+
+              <hr class="pt-0 mt-0">
               <div class="row">
-                <h6 class="card-subtitle mb-2 ml-3 text-success">Oferta más Baja</h6>
-                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto</h6>
+                <h6 class="card-subtitle mb-2 ml-3 text-secondary">Producto:</h6>
+                <h6 class="card-subtitle mb-2 ml-3 text-success">#producto#</h6>
               </div>
               <p class="card-text">
                 Info de este producto. Descripción de esta oferta traida de la BD.
               </p>
-              <button type="button" class="btn btn-sm btn-secondary">
-                Cantidad <span class="badge badge-light">100</span>
+              <button type="button" class="btn btn-sm btn-light">
+                Cantidad <span class="badge badge-success">100</span>
               </button>
-              <button type="button" class="btn btn-sm btn-secondary">
-                <span class="badge badge-light">Lb</span>
+              <button type="button" class="btn btn-sm btn-light">
+                <span class="badge badge-success">Lb</span>
               </button>
             </div>
           </div>
