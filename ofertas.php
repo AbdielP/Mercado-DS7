@@ -49,10 +49,23 @@
       <div class="col-md-3">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Ofertas disponibles</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Producto: #Servicio basado en el codigo#</h6>
-            <p class="card-text">Listado de ofertas disponibles para el producto.</p>
-            <p class="card-text text-info">Las ofertas contienen información del producto y del productor.</p>
+            <h5 class="card-title text-center">Ofertas disponibles</h5>
+            <div class="row d-flex align-items-center justify-content-center">
+              <i class="fas fa-seedling h2 m-2 text-secondary"></i><i class="fas fa-carrot h2 m-2 text-secondary"></i><i class="fas fa-tractor h2 m-2 text-secondary"></i>
+            </div>
+            <div class="row">
+              <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <h6 class='card-subtitle'>Producto: </h6>
+              </div>
+              <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <?php
+                  $codigo = $_GET['codigo'];
+                  print "<h6 class='text-uppercase'>".$codigo."</h6>";
+                ?>
+              </div>
+            </div>
+            <p class="card-text text-center small">Listado de ofertas disponibles para este producto.</p>
+            <p class="card-text text-info"><i class="fas fa-exclamation-circle text-warning"></i> Las ofertas contienen información del producto y del productor.</p>
             <hr>
             <div class='mb-1 text-muted'>Opciones: </div>
             <?php
@@ -65,18 +78,21 @@
             ?>
            
             <hr>
-            <a href="index.php" class="card-link">Volver a listado de productos</a>
+            <a href="index.php" class="card-link"><i class="fas fa-arrow-circle-left"></i> Volver a listado de productos</a>
             <!-- <a href="#" class="card-link">Another link</a> -->
           </div>
         </div>
       </div>
       
       <div class="col-md-9">
-        <div class="card-group">
-          <?php
-            require_once("php/ofertas.php");
-          ?>
+        <div class="row">
+          <div class="col-md-12">
+            <?php
+              require_once("php/ofertas.php");
+            ?>
+          </div>
         </div>
+        
       </div>
     </div>
 
