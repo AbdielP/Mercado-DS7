@@ -50,7 +50,7 @@
         echo "</div>"; 
     }
   ?>
-  <div class="container mt-5 mb-5 p-5">
+  <div class="container mt-5 mb-5 p-5 opaco">
     <div class="row">
         <div class="col-md-12">
             <div class="row">
