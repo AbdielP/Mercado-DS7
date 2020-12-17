@@ -13,3 +13,7 @@ html, body {
     width: 25%;
     margin: 10px;
 }
+
+.prueba {
+    background-color: rgba(255, 255, 255, .5);
+}

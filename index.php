@@ -131,8 +131,8 @@
           </div>
                       
           <!-- Tarjeta de oferta más alta y más baja  -->
-          <div class="card flex-md-row">
-            <div class="card-body">
+          <div class="card flex-md-row prueba">
+            <div class="card-body prueba">
 
               <div class="row">
                   <div class="col-md-7">
