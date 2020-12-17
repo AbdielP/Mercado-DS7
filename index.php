@@ -63,11 +63,16 @@
             </div>
           </div>
                 <!-- TARJETAS  -->
-          <div class="card  bg-light p-2 mb-1">
+          <div class="p-2 mb-1">
             <div class="order-md-2">
               <h6 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted"><i class="fas fa-flag"></i> Ofertas Totales </span>
-                <span class='badge badge-danger badge-pill'>##</span>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-primary badge-pill'>".$estadistica['total_ofertas']."</span>";
+                  }
+                ?> 
               </h6>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -75,31 +80,146 @@
                     <h6 class='my-0 text-info text-capitalize'>Total de ofertas: </h6>
                     <small class='text-muted'>Ofertas públicadas de todos los productos.</small>
                   </div>
-                  <span class='text-primary h6'>##</span>
-                    
+                  <?php
+                    require_once("php/estadisticas.php");
+                    foreach (estadisticas() as $key => $estadistica) {
+                      print "<span class='text-primary h6'>".$estadistica['total_ofertas']."</span>";
+                    }
+                  ?> 
                 </li>
               </ul>
-              
+              <!-- ESTADISTICAS  -->
               <div class='col-md-12'>
-                <h6 class="mb-2">Estadisticas de (#producto#) <i class="fas fa-chart-bar"></i></h6>
-                <div class='d-flex justify-content-between mb-1'>
+                <h6 class="mb-2 d-flex d-flex justify-content-between">Estadisticas Cebolla Nacional <i class="fas fa-chart-bar"></i></h6>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-info badge-pill font-size-badge'>$".$estadistica['promedio_cebolla']."</span>";
+                  }
+                ?>
                   <small class='text-muted'>Media de precio/precio promedio</small>
-                  <span class='badge badge-info badge-pill font-size-badge'>$0.00</span>
                 </div>  
-                <div class='d-flex justify-content-between mb-1'>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-success badge-pill font-size-badge'>$".$estadistica['min_cebolla']."</span>";
+                  }
+                ?>
                   <small class='text-muted'>Precio más bajo</small>
-                  <span class='badge badge-success badge-pill font-size-badge'>$0.00</span>
                 </div>
-                <div class='d-flex justify-content-between mb-1'>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-warning badge-pill font-size-badge'>$".$estadistica['max_cebolla']."</span>";
+                  }
+                ?>
                   <small class='text-muted'>Precio más alto</small>
-                  <span class='badge badge-warning badge-pill font-size-badge'>$0.00</span>
                 </div> 
                 <hr> 
               </div>
 
+              <div class='col-md-12'>
+                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Papa Nacional <i class="fas fa-chart-bar"></i></h6>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-info badge-pill font-size-badge'>$".$estadistica['promedio_papa']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Media de precio/precio promedio</small>
+                </div>  
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-success badge-pill font-size-badge'>$".$estadistica['min_papa']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más bajo</small>
+                </div>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-warning badge-pill font-size-badge'>$".$estadistica['max_papa']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más alto</small>
+                </div> 
+                <hr> 
+              </div>
+
+              <div class='col-md-12'>
+                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Tomate Nacional <i class="fas fa-chart-bar"></i></h6>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-info badge-pill font-size-badge'>$".$estadistica['promedio_tomate']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Media de precio/precio promedio</small>
+                </div>  
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-success badge-pill font-size-badge'>$".$estadistica['min_tomate']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más bajo</small>
+                </div>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-warning badge-pill font-size-badge'>$".$estadistica['max_tomate']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más alto</small>
+                </div> 
+                <hr> 
+              </div>
+
+              <div class='col-md-12'>
+                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Repollo <i class="fas fa-chart-bar"></i></h6>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-info badge-pill font-size-badge'>$".$estadistica['promedio_repollo']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Media de precio/precio promedio</small>
+                </div>  
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-success badge-pill font-size-badge'>$".$estadistica['min_repollo']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más bajo</small>
+                </div>
+                <div class='d-flex justify-content-between align-items-center mb-1'>
+                <?php
+                  require_once("php/estadisticas.php");
+                  foreach (estadisticas() as $key => $estadistica) {
+                    print "<span class='badge badge-warning badge-pill font-size-badge'>$".$estadistica['max_repollo']."</span>";
+                  }
+                ?>
+                  <small class='text-muted'>Precio más alto</small>
+                </div> 
+                <hr> 
+              </div>
+              <!-- FIN ESTADSTICAS  -->
+
             </div>
           </div>
-                <!-- HASTA AQUÍ  -->
         </div>
 
         <div class="col-md-9">
