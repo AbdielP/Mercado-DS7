@@ -46,7 +46,7 @@
     <main role="main" class="container pb-4">
       <div class="row mt-5">
         <div class="col-md-3">
-          <div class="card">
+          <div class="card mb-3">
             <div class="card-body">
               <h4 class="card-title text-center">¡Bienvenido!</h4>
               <h6 class="card-subtitle mb-2 text-muted text-center">Mercado de ofertas Online</h6>
@@ -62,6 +62,44 @@
               ?>  
             </div>
           </div>
+                <!-- TARJETAS  -->
+          <div class="card  bg-light p-2 mb-1">
+            <div class="order-md-2">
+              <h6 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted"><i class="fas fa-flag"></i> Ofertas Totales </span>
+                <span class='badge badge-danger badge-pill'>##</span>
+              </h6>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class='my-0 text-info text-capitalize'>Total de ofertas: </h6>
+                    <small class='text-muted'>Ofertas públicadas de todos los productos.</small>
+                  </div>
+                  <span class='text-primary h6'>##</span>
+                    
+                </li>
+              </ul>
+              
+              <div class='col-md-12'>
+                <h6 class="mb-2">Estadisticas de (#producto#) <i class="fas fa-chart-bar"></i></h6>
+                <div class='d-flex justify-content-between mb-1'>
+                  <small class='text-muted'>Media de precio/precio promedio</small>
+                  <span class='badge badge-info badge-pill font-size-badge'>$0.00</span>
+                </div>  
+                <div class='d-flex justify-content-between mb-1'>
+                  <small class='text-muted'>Precio más bajo</small>
+                  <span class='badge badge-success badge-pill font-size-badge'>$0.00</span>
+                </div>
+                <div class='d-flex justify-content-between mb-1'>
+                  <small class='text-muted'>Precio más alto</small>
+                  <span class='badge badge-warning badge-pill font-size-badge'>$0.00</span>
+                </div> 
+                <hr> 
+              </div>
+
+            </div>
+          </div>
+                <!-- HASTA AQUÍ  -->
         </div>
 
         <div class="col-md-9">

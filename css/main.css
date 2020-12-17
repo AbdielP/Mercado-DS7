@@ -3,8 +3,9 @@ html, body {
     height: 100%;
     /* background-color:#E6E6E6; */
     background-image: url("../assets/img/fondo1.png");
-    /* background-position: center; */
     background-size: cover;
+    
+    background-attachment: fixed;
     color: #424242;
     font-size: .9rem;
 }
