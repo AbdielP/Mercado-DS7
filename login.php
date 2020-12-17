@@ -65,8 +65,11 @@
     ?>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 d-flex justify-content-end align-items-center">
-                    <p class='text-secondary text-center'> <i class="fas fa-exclamation-circle text-warning"></i> Esta zona tiene el acceso restringido. Para entrar debe identificarse.</p>
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <p class='text-secondary text-center'> <i class="fas fa-exclamation-circle text-warning"></i> Esta zona tiene el acceso restringido. Para entrar debe identificarse.</p>
+                    </div>
+                    
                 </div>
                 <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
                     <i class="fas fa-store text-success m-3 display-3"></i>
@@ -75,13 +78,20 @@
                         <input type="password" name="pswd" id="pswd" class="form-control" placeholder="Contraseña" required>
                         
                         <button class="btn btn-sm btn-success btn-block mt-4" type="submit">Entrar</button>
+                        
                     </form>
-                    <footer class="my-5  text-muted text-center text-small h6">
+                    <footer class="mt-4 text-muted text-center text-small h6">
                          <p class="mb-1">&copy; 2020 - Proyecto final Desarrollo de software 7</p>
                             <ul class="list-inline">
                             <li class="list-inline-item"><a href="index.php">Home</a></li>
                         </ul>
+                        <hr>
                     </footer>
+                    <div class="row d-flex">
+                        <i class="fab fa-cc-visa text-secondary h2 m-2"></i>
+                        <i class="fab fa-cc-mastercard text-secondary h2 m-2"></i>
+                        <i class="fab fa-cc-paypal text-secondary h2 m-2"></i>
+                    </div>
                 </div>
                 <div class="col-md-4 d-flex justify-content-start align-items-center">
                     <p class='text-secondary'>Nota: Si no dispone de identificación o tiene problemas para entrar

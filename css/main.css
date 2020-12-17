@@ -17,3 +17,19 @@ html, body {
 .opaco {
     background-color: rgba(255, 255, 255, .5);
 }
+
+.doo001 {
+    background-color: rgba(245, 246, 206, .5);
+}
+
+.doo002 {
+    background-color: rgba(206, 227, 246, .5);
+}
+
+.doo003 {
+    background-color: rgba(246, 216, 206, .5);
+}
+
+.doo004 {
+    background-color: rgba(216, 246, 206, .5);
+}
