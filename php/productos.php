@@ -6,7 +6,7 @@
     foreach ($productos as $key => $producto) {
         print "<div class='col-md-6'>";
         print "        <div class='card-deck'>";
-        print "            <div class='card prueba'>";
+        print "            <div class='card opaco'>";
         print "                <img class='card-img-top img-producto' src='".$producto['img']."' alt='Producto'>";
         print "                <div class='card-body pb-2'>";
         print "                    <h4 class='card-title text-capitalize'>".$producto['prod']."</h4>";

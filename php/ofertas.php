@@ -5,7 +5,7 @@
     $ofertas = $obj_ofertas->get_ofertas_codigo($codigo);
     foreach ($ofertas as $key => $oferta) {
 
-        print   "<div class='card flex-md-row mb-1 box-shadow h-md-250 border-light'>";
+        print   "<div class='card flex-md-row mb-1 box-shadow h-md-250 border-light opaco'>";
         print     "<img class='card-img-left mt-4 d-none d-md-block' src='./assets/img/papa2.png' height='100' alt='Card image cap'>";
         print     "<div class='card-body d-flex flex-column align-items-start'>";
         print       "<strong class='d-inline-block mb-2 text-primary text-uppercase'>".$oferta['codpr']."</strong>";

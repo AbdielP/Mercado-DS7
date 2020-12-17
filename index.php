@@ -48,9 +48,9 @@
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">¡Bienvenido!</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Mercado de ofertas Online</h6>
-              <p class="card-text">Consulte o publique ofertas de productos en Ofertas Online. El mercado de ofertas al por mayor más éxitoso.</p>
+              <h4 class="card-title text-center">¡Bienvenido!</h4>
+              <h6 class="card-subtitle mb-2 text-muted text-center">Mercado de ofertas Online</h6>
+              <p class="card-text text-justify">Consulte o publique ofertas de sus productos en este mercado online.</p>
               <hr>
               <!-- <a href="#" class="card-link">Card link</a> -->
               <?php
@@ -131,8 +131,8 @@
           </div>
                       
           <!-- Tarjeta de oferta más alta y más baja  -->
-          <div class="card flex-md-row prueba">
-            <div class="card-body prueba">
+          <div class="card flex-md-row opaco">
+            <div class="card-body opaco">
 
               <div class="row">
                   <div class="col-md-7">
