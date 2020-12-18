@@ -16,8 +16,8 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="col-md-10">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="50" height="50" alt=""> Ofertas Online
+            <a class="navbar-brand" href="index.php">
+                <p class="text-secondary p-0 m-0"><i class="fas fa-sign h3 text-success"></i> Ofertas Online</p>
             </a>
         </div>
         <div class="col-md-2">

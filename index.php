@@ -15,8 +15,8 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="col-md-10">
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.png" width="50" height="50" alt=""> Ofertas Online
+        <a class="navbar-brand" href="index.php">
+          <p class="text-secondary p-0 m-0"><i class="fas fa-sign h3 text-success"></i> Ofertas Online</p>
         </a>
       </div>
       <div class="col-md-2">
@@ -26,7 +26,7 @@
           print "<ul class='navbar-nav'>";
           print     "<li class='nav-item dropdown'>";
           print         "<a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>";
-          print         "Bienvenido ".$_SESSION["usuario_valido"]."";
+          print           "Bienvenido ".$_SESSION["usuario_valido"]."";
           print         "</a>";
           print         "<div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>";
           print         "<a class='dropdown-item' href='index.php'>Home</a>";
@@ -77,7 +77,7 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class='my-0 text-info text-capitalize'>Total de ofertas: </h6>
+                    <h6 class='my-0 text-info'>Total de ofertas: </h6>
                     <small class='text-muted'>Ofertas públicadas de todos los productos.</small>
                   </div>
                   <?php
@@ -90,7 +90,7 @@
               </ul>
               <!-- ESTADISTICAS  -->
               <div class='col-md-12'>
-                <h6 class="mb-2 d-flex d-flex justify-content-between">Estadisticas Cebolla Nacional <i class="fas fa-chart-bar"></i></h6>
+                <h6 class="mb-2 d-flex d-flex justify-content-between">Estadísticas Cebolla Nacional <i class="fas fa-chart-bar"></i></h6>
                 <div class='d-flex justify-content-between align-items-center mb-1'>
                 <?php
                   require_once("php/estadisticas.php");
@@ -122,7 +122,7 @@
               </div>
 
               <div class='col-md-12'>
-                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Papa Nacional <i class="fas fa-chart-bar"></i></h6>
+                <h6 class="mb-2 d-flex justify-content-between">Estadísticas Papa Nacional <i class="fas fa-chart-bar"></i></h6>
                 <div class='d-flex justify-content-between align-items-center mb-1'>
                 <?php
                   require_once("php/estadisticas.php");
@@ -154,7 +154,7 @@
               </div>
 
               <div class='col-md-12'>
-                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Tomate Nacional <i class="fas fa-chart-bar"></i></h6>
+                <h6 class="mb-2 d-flex justify-content-between">Estadísticas Tomate Nacional <i class="fas fa-chart-bar"></i></h6>
                 <div class='d-flex justify-content-between align-items-center mb-1'>
                 <?php
                   require_once("php/estadisticas.php");
@@ -186,7 +186,7 @@
               </div>
 
               <div class='col-md-12'>
-                <h6 class="mb-2 d-flex justify-content-between">Estadisticas Repollo <i class="fas fa-chart-bar"></i></h6>
+                <h6 class="mb-2 d-flex justify-content-between">Estadísticas Repollo <i class="fas fa-chart-bar"></i></h6>
                 <div class='d-flex justify-content-between align-items-center mb-1'>
                 <?php
                   require_once("php/estadisticas.php");
