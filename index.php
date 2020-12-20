@@ -383,6 +383,8 @@
             </div>
           </div>
           
+          <!-- VER: SOAP y MICROSERVICIOS  -->
+
           <div class="row pl-1 pr-1">
             <!-- Tarjetas de selección de rubro/producto  -->
             <?php

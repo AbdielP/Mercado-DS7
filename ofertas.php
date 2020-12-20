@@ -79,7 +79,6 @@
            
             <hr>
             <a href="index.php" class="card-link"><i class="fas fa-arrow-circle-left"></i> Volver a listado de productos</a>
-            <!-- <a href="#" class="card-link">Another link</a> -->
           </div>
         </div>
       </div>
